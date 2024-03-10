@@ -48,22 +48,15 @@ void main()
     // float strength = barX + barY;
 
     // Pattern 15
-    float strength = abs(vUv.x - 0.5);
+    // float strength = abs(vUv.x - 0.5);
 
+    // Pattern 16
+    float strength = min(abs(vUv.x - 0.5), abs(vUv.y - 0.5));
+    
     // gl_FragColor = vec4(0.5, 0.0, 1.0, 1.0); Base Pattern
     // gl_FragColor = vec4(vUv, 1.0, 1.0); Pattern 1
     // gl_FragColor = vec4(vUv, 0.0, 1.0); Pattern 2
     // gl_FragColor = vec4(vUv.x, vUv.x, vUv.x, 1.0); Pattern 3
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 4
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 5
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 6
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 7
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 8
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 9
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 10
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 11
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 12
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 13
-    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 14
+    // gl_FragColor = vec4(strength, strength, strength, 1.0); Pattern 4 - 15
     gl_FragColor = vec4(strength, strength, strength, 1.0);
 }
