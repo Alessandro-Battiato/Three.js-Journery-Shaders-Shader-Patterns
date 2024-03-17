@@ -91,7 +91,7 @@ void main()
     // float strength = length(vUv - 0.5);
 
     // Pattern 25
-    float strength = 1.0 - length(vUv - 0.5);
+    float strength = 0.01 / length(vUv - 0.5);
 
     // gl_FragColor = vec4(0.5, 0.0, 1.0, 1.0); Base Pattern
     // gl_FragColor = vec4(vUv, 1.0, 1.0); Pattern 1
