@@ -1,5 +1,9 @@
 varying vec2 vUv;
 
+float random(vec2 st) {
+    return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+}
+
 void main()
 {
     // Grayscale value
@@ -63,8 +67,11 @@ void main()
     // float strength = floor(vUv.x * 10.0) / 10.0;
 
     // Pattern 20
-    float strength = floor(vUv.x * 10.0) / 10.0;
-    strength *= floor(vUv.y * 10.0) / 10.0;
+    // float strength = floor(vUv.x * 10.0) / 10.0;
+    // strength *= floor(vUv.y * 10.0) / 10.0;
+
+    // Pattern 21
+    float strength = random(vUv);
     
     // gl_FragColor = vec4(0.5, 0.0, 1.0, 1.0); Base Pattern
     // gl_FragColor = vec4(vUv, 1.0, 1.0); Pattern 1
